@@ -1,0 +1,3 @@
+module Budurl
+  VERSION = "0.0.1"
+end
