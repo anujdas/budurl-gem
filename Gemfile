@@ -1,4 +1,7 @@
-source "http://rubygems.org"
+source :rubygems
 
-# Specify your gem's dependencies in budurl.gemspec
+group :development do
+  gem "rake"
+end
+
 gemspec

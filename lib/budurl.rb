@@ -1,5 +1,4 @@
-require "budurl/version"
-
-module Budurl
-  # Your code goes here...
-end
+require 'httparty'
+require 'budurl/url'
+require 'budurl/client'
+require 'budurl/version'

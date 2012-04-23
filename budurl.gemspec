@@ -6,19 +6,20 @@ Gem::Specification.new do |s|
   s.name        = "budurl"
   s.version     = Budurl::VERSION
   s.authors     = ["Anuj Das"]
-  s.email       = ["adas@mylookout.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
-
-  s.rubyforge_project = "budurl"
+  s.email       = ["anuj.das@mylookout.com"]
+  s.homepage    = "https://github.com/lookout/budurl-gem"
+  s.summary     = %q{A gem for interfacing with the BudURL.Pro url shortener API}
+  s.description = %q{Supported operations include shrinking, expanding, and counting clicks.}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
+  s.add_dependency 'httparty'
+
   # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_development_dependency 'ruby-debug'
+  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'mimic'
 end
