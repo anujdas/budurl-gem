@@ -34,7 +34,9 @@ module Budurl
       opts[:query] ||= {}
       opts[:query].merge!(@default_query_opts)
       response = self.class.get(uri, opts).parsed_response
-      if response['success'] == 1
+      if response.nil?
+        raise Error.new('No response from server.', 0)
+      elsif response['success'] == 1
         response
       else
         raise Error.new(response['error_message'], response['error_code'])
