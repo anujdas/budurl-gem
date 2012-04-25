@@ -5,6 +5,7 @@ module Budurl
 
     attr_accessor :link, :long_url, :hash
 
+    # Create a Url with values filled in from a Client response.
     def initialize(client, response = nil)
       @client = client
 
@@ -15,6 +16,9 @@ module Budurl
       end
     end
 
+    # Retrieve click counts for this shorturl.
+    # daily flag allows day-by-day breakdowns.
+    # date_from and date_to are Date objects which allow filtering.
     def clicks(daily=false, date_from=nil, date_to=nil)
       opts = { :daily => daily ? 1 : 0 }
       opts.merge!(:date_from => date_from.to_s) if date_from
