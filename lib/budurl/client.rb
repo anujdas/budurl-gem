@@ -1,15 +1,15 @@
 module Budurl
-  def self.new(api_key)
-    Budurl::Client.new(api_key)
+  def self.new(api_key, uri = BUDURL_PRO_BASE_URI)
+    Budurl::Client.new(api_key, uri)
   end
 
   class Client
     include HTTParty
 
-    base_uri 'http://BudURL.Pro/api/v2'
     format :json
 
-    def initialize(api_key)
+    def initialize(api_key, uri)
+      self.class.base_uri uri
       @default_query_opts = { :api_key => api_key }
     end
 
