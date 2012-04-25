@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+$:.push("lib")
+
+require 'budurl'
+
+budurl = Budurl.new(ARGV[0])
+
+puts budurl.expand(ARGV[1]).long_url

@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require 'date'
+
+$:.push("lib")
+
+require 'budurl'
+
+budurl = Budurl.new(ARGV[0])
+
+url = budurl.expand(ARGV[1])
+
+date_from = ARGV[2] ? Date.parse(ARGV[2]) : nil
+date_to = ARGV[3] ? Date.parse(ARGV[3]) : nil
+
+count = url.clicks(false, date_from, date_to)
+dates = url.clicks(true, date_from, date_to)
+
+puts "URL: #{url.long_url}"
+puts "Total clicks: #{count}"
+puts "Per date:"
+dates.each {|date,clicks| puts "#{date}: #{clicks}"}
