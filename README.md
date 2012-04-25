@@ -1,5 +1,7 @@
 # BudURL
 
+[![Build Status](https://buildhive.cloudbees.com/job/lookout/job/budurl-gem/badge/icon)](https://buildhive.cloudbees.com/job/lookout/job/budurl-gem/)
+
 ### About
 
 This gem provides a simple interface to the BudURL.Pro API, documented [here](http://budurl.com/page/budurlpro-api). BudURL provides URL shortening services as well as analytics, some of which is available externally. In particular, the API allows:
