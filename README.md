@@ -3,6 +3,7 @@
 ### About
 
 This gem provides a simple interface to the BudURL.Pro API, documented [here](http://budurl.com/page/budurlpro-api). BudURL provides URL shortening services as well as analytics, some of which is available externally. In particular, the API allows:
+
 * **Shortening URLs** along with adding notes, setting redirect types, and checking for duplicates,
 * **Expanding URLs** which have been shortened using the service,
 * **Gathering analytics** such as click counts either since link creation or on a day-by-day basis, filterable by time period.
